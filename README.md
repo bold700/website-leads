@@ -18,7 +18,7 @@ Elke lead-map is self-contained: eigen pagina's, eigen `site.css`/`site.js`, en 
 | Lead | Branche | Status | Demo |
 |---|---|---|---|
 | Fix-It All | Autogarage Utrecht | ✅ Live demo | [openen](https://bold700.github.io/website-leads/fix-it-all/) |
-| Rijschool YouYou | Rijschool Utrecht | 🔎 Research klaar, design volgt | — |
+| Rijschool YOU YOU | Rijschool Utrecht | ✅ Live demo | [openen](https://bold700.github.io/website-leads/rij-youyou/) |
 
 ## Nieuwe lead toevoegen
 Zie [`_template/STARTER.md`](_template/STARTER.md).
