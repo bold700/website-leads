@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; afspraak | Fix-It All Utrecht</title>
+  <meta name="description" content="Maak een afspraak bij Fix-It All Utrecht. Industrieweg 12, 3542 AD Utrecht. Bel 030 214 8488 of stuur een bericht via het formulier." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="site.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { brand: { orange: 'rgb(var(--brand-orange) / <alpha-value>)', orangeDark: 'rgb(var(--brand-orange-dark) / <alpha-value>)' }, ink: { 950:'#070B11',900:'#0B1118',800:'#0E1620',700:'#13202C',card:'#16222F',border:'#26333F' } },
+      fontFamily: { sans: ['Inter','system-ui','sans-serif'] }
+    } } };
+  </script>
+</head>
+
+<body class="bg-slate-50 text-ink-900 antialiased selection:bg-brand-orange/30" data-page="contact">
+  <a href="#contact" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-3 focus:left-3 focus:rounded-md focus:bg-brand-orange focus:px-4 focus:py-2 focus:font-semibold focus:text-white">Direct naar inhoud</a>
+  <div id="site-header"></div>
+
+  <main>
+    <!-- BANNER -->
+    <section class="banner text-white" style="background-image:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=80')">
+      <div class="mx-auto max-w-7xl px-5 pt-32 pb-16 lg:px-8 lg:pt-40 lg:pb-20">
+        <nav class="mb-4 text-xs text-white/55" aria-label="Kruimelpad"><a href="index.html" class="hover:text-brand-orange">Home</a> <span class="mx-1.5">/</span> <span class="text-white/80">Contact</span></nav>
+        <h1 class="max-w-2xl text-4xl font-extrabold leading-[1.05] tightest sm:text-5xl">Contact &amp; afspraak</h1>
+        <p class="mt-4 max-w-2xl text-base leading-relaxed text-white/75 sm:text-lg">Een afspraak maken, een vraag stellen of langskomen voor advies? We staan voor u klaar. Bel ons of stuur een bericht.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="scroll-mt-20">
+      <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <!-- gegevens -->
+          <div class="space-y-5">
+            <div class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-orange" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><p class="text-sm leading-relaxed text-slate-700"><span class="font-semibold text-ink-900">Industrieweg 12</span><br />3542 AD Utrecht</p></div>
+            <div class="flex items-center gap-3"><svg class="h-5 w-5 shrink-0 text-brand-orange" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:0302148488" class="text-sm font-medium text-slate-700 hover:text-brand-orange transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange rounded">030 214 8488</a></div>
+            <div class="flex items-center gap-3"><svg class="h-5 w-5 shrink-0 text-brand-orange" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><a href="mailto:info@fix-it-all.nl" class="text-sm font-medium text-slate-700 hover:text-brand-orange transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange rounded">info@fix-it-all.nl</a></div>
+            <div class="flex items-start gap-3"><svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-orange" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <div class="text-sm text-slate-700"><p class="font-semibold text-ink-900">Openingstijden</p><dl class="mt-1 space-y-0.5"><div class="flex gap-4"><dt class="w-20">Ma - Vr</dt><dd>08:00 - 17:30</dd></div><div class="flex gap-4"><dt class="w-20">Zaterdag</dt><dd>09:00 - 13:00</dd></div><div class="flex gap-4"><dt class="w-20">Zondag</dt><dd>Gesloten</dd></div></dl></div>
+            </div>
+            <div class="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-600 shadow-sm">
+              <p class="font-semibold text-ink-900">Goed bereikbaar</p>
+              <p class="mt-1">Vlak bij de A12, op loopafstand van OV-halte Papendorp. Gratis parkeren voor de deur.</p>
+            </div>
+          </div>
+
+          <!-- kaart -->
+          <div class="overflow-hidden rounded-xl border border-slate-200 shadow-sm min-h-[300px]">
+            <iframe title="Locatie Fix-It All op de kaart" class="h-full min-h-[300px] w-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=5.0760%2C52.0700%2C5.1080%2C52.0850&layer=mapnik&marker=52.0775%2C5.0920"></iframe>
+          </div>
+
+          <!-- formulier -->
+          <form class="space-y-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm" onsubmit="return handleContact(event)">
+            <h2 class="text-lg font-bold tracking-tight">Stuur een bericht</h2>
+            <div class="field"><label for="naam">Naam</label><input id="naam" name="naam" type="text" required placeholder="Jan de Vries" class="w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm text-ink-900 placeholder:text-slate-400 transition-colors focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/30" /></div>
+            <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" required placeholder="jan@example.nl" class="w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm text-ink-900 placeholder:text-slate-400 transition-colors focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/30" /></div>
+            <div class="field"><label for="tel">Telefoon</label><input id="tel" name="tel" type="tel" placeholder="06 12345678" class="w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm text-ink-900 placeholder:text-slate-400 transition-colors focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/30" /></div>
+            <div class="field"><label for="bericht">Bericht</label><textarea id="bericht" name="bericht" rows="4" required minlength="10" placeholder="Graag ontvang ik meer informatie." class="w-full rounded-md border border-slate-300 px-3 py-2.5 text-sm text-ink-900 placeholder:text-slate-400 transition-colors focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/30"></textarea><p class="mt-1 text-xs text-slate-400">Minimaal 10 karakters</p></div>
+            <button type="submit" class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-brand-orange px-4 py-3 text-sm font-semibold text-white transition-all duration-150 hover:bg-brand-orangeDark active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>Verstuur bericht</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="site.js"></script>
+</body>
+</html>

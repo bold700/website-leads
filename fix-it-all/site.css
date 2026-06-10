@@ -1,0 +1,25 @@
+/* ===== Brand kleur op één plek (rood) ===== */
+:root {
+  --brand-orange: 220 38 38;         /* #DC2626 - rood */
+  --brand-orange-dark: 185 28 28;    /* #B91C1C - donkerrood (hover) */
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, sans-serif; }
+.tightest { letter-spacing: -0.03em; }
+
+/* Banner met donkere premium overlay */
+.banner { position: relative; background-size: cover; background-position: center; }
+.banner::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(7,11,17,0.93) 0%, rgba(7,11,17,0.78) 45%, rgba(7,11,17,0.5) 100%);
+}
+.banner > * { position: relative; z-index: 1; }
+
+/* Outlined floating label voor formulieren */
+.field { position: relative; }
+.field > label { position: absolute; top: -0.55rem; left: 0.7rem; padding: 0 0.35rem; background: #fff; font-size: 0.72rem; font-weight: 600; color: #475569; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

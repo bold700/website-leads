@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auto's te koop | Fix-It All Utrecht, occasions met BOVAG-garantie</title>
+  <meta name="description" content="Scherp geprijsde, vakkundig gecontroleerde occasions bij Fix-It All Utrecht. Inclusief beurt, APK en garantie. Bekijk het actuele aanbod." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="site.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { brand: { orange: 'rgb(var(--brand-orange) / <alpha-value>)', orangeDark: 'rgb(var(--brand-orange-dark) / <alpha-value>)' }, ink: { 950:'#070B11',900:'#0B1118',800:'#0E1620',700:'#13202C',card:'#16222F',border:'#26333F' } },
+      fontFamily: { sans: ['Inter','system-ui','sans-serif'] }
+    } } };
+  </script>
+</head>
+
+<body class="bg-slate-50 text-ink-900 antialiased selection:bg-brand-orange/30" data-page="occasions">
+  <a href="#aanbod" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-3 focus:left-3 focus:rounded-md focus:bg-brand-orange focus:px-4 focus:py-2 focus:font-semibold focus:text-white">Direct naar aanbod</a>
+  <div id="site-header"></div>
+
+  <main>
+    <!-- BANNER -->
+    <section class="banner text-white" style="background-image:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=80')">
+      <div class="mx-auto max-w-7xl px-5 pt-32 pb-16 lg:px-8 lg:pt-40 lg:pb-20">
+        <nav class="mb-4 text-xs text-white/55" aria-label="Kruimelpad"><a href="index.html" class="hover:text-brand-orange">Home</a> <span class="mx-1.5">/</span> <span class="text-white/80">Auto's te koop</span></nav>
+        <h1 class="max-w-2xl text-4xl font-extrabold leading-[1.05] tightest sm:text-5xl">Auto's te koop</h1>
+        <p class="mt-4 max-w-xl text-base leading-relaxed text-white/75 sm:text-lg">Scherp geprijsde, vakkundig gecontroleerde occasions. Iedere auto wordt afgeleverd inclusief grote beurt, nieuwe APK en garantie.</p>
+        <div class="mt-7 flex flex-wrap gap-x-8 gap-y-3 text-sm">
+          <span class="flex items-center gap-2"><svg class="h-5 w-5 text-brand-orange" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>BOVAG-garantie</span>
+          <span class="flex items-center gap-2"><svg class="h-5 w-5 text-brand-orange" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Nieuwe APK &amp; beurt</span>
+          <span class="flex items-center gap-2"><svg class="h-5 w-5 text-brand-orange" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.1 2.1-2.3-.6-.6-2.3 2.1-2.1z"/></svg>Inruil mogelijk</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- AANBOD -->
+    <section id="aanbod" class="scroll-mt-20">
+      <div class="mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-16">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <h2 class="text-2xl font-extrabold tightest sm:text-3xl">Ons aanbod <span id="count" class="text-base font-medium text-slate-400">(6 auto's)</span></h2>
+          <div role="group" aria-label="Filter op type" class="flex flex-wrap gap-2">
+            <button data-filter="alle" class="filter-btn rounded-full border border-brand-orange bg-brand-orange px-4 py-2 text-sm font-semibold text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange">Alle</button>
+            <button data-filter="compact" class="filter-btn rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition-colors hover:border-brand-orange focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange">Compact</button>
+            <button data-filter="suv" class="filter-btn rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition-colors hover:border-brand-orange focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange">SUV</button>
+            <button data-filter="premium" class="filter-btn rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition-colors hover:border-brand-orange focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange">Premium</button>
+            <button data-filter="sport" class="filter-btn rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition-colors hover:border-brand-orange focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange">Sport</button>
+          </div>
+        </div>
+        <div id="grid" class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-ink-900 text-white">
+      <div class="mx-auto max-w-7xl px-5 py-14 lg:px-8 lg:py-16">
+        <div class="rounded-2xl border border-ink-border bg-gradient-to-br from-ink-700 to-ink-950 p-8 text-center sm:p-12">
+          <h2 class="text-2xl font-extrabold tightest sm:text-3xl">Auto gezien die u aanspreekt?</h2>
+          <p class="mx-auto mt-3 max-w-xl text-white/65">Bel of mail ons voor meer informatie of een proefrit. Inruil van uw huidige auto is altijd bespreekbaar.</p>
+          <div class="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a href="tel:0302148488" class="inline-flex w-full items-center justify-center gap-2 rounded-md bg-brand-orange px-6 py-3.5 text-sm font-semibold text-white transition-all duration-150 hover:bg-brand-orangeDark active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900 sm:w-auto">Bel 030 214 8488</a>
+            <a href="contact.html" class="inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/20 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-150 hover:bg-white/5 active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange sm:w-auto">Plan een proefrit</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="site.js"></script>
+  <script>
+    var IMG = 'https://images.unsplash.com/';
+    var Q = '?auto=format&fit=crop&w=700&q=70';
+    var cars = [
+      { merk: 'Fiat 500', model: '1.2 Lounge', prijs: '11.950', jaar: 2019, km: '54.300', brandstof: 'Benzine', transmissie: 'Handgeschakeld', cat: 'compact', badge: 'Zuinig', img: 'photo-1549317661-bd32c8ce0db2' },
+      { merk: 'BMW 4-serie', model: '420i Coupé M-Sport', prijs: '34.900', jaar: 2020, km: '47.800', brandstof: 'Benzine', transmissie: 'Automaat', cat: 'premium', badge: 'M-Sport', img: 'photo-1502877338535-766e1452684a' },
+      { merk: 'Toyota RAV4', model: 'Hybrid AWD Executive', prijs: '32.950', jaar: 2021, km: '38.100', brandstof: 'Hybride', transmissie: 'Automaat', cat: 'suv', badge: 'Hybride', img: 'photo-1617469767053-d3b523a0b982' },
+      { merk: 'Audi RS6', model: 'Avant 4.0 TFSI quattro', prijs: '119.500', jaar: 2021, km: '29.500', brandstof: 'Benzine', transmissie: 'Automaat', cat: 'premium', badge: 'Nieuw binnen', img: 'photo-1606664515524-ed2f786a0bd6' },
+      { merk: 'Mercedes-AMG', model: 'GT 4.0 V8', prijs: '112.000', jaar: 2019, km: '31.200', brandstof: 'Benzine', transmissie: 'Automaat', cat: 'sport', badge: 'Youngtimer', img: 'photo-1605559424843-9e4c228bf1c2' },
+      { merk: 'Nissan GT-R', model: '3.8 V6 Black Edition', prijs: '89.900', jaar: 2018, km: '42.600', brandstof: 'Benzine', transmissie: 'Automaat', cat: 'sport', badge: 'Uniek', img: 'photo-1568605117036-5fe5e7bab0b7' },
+    ];
+    var I = {
+      cal: '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',
+      road: '<path d="M4 19l4-14M20 19l-4-14M12 6v2M12 11v2M12 16v2"/>',
+      fuel: '<path d="M3 22h12V4a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2zM15 9h2a2 2 0 0 1 2 2v6a2 2 0 0 0 2 2 2 2 0 0 0 2-2V8l-4-4"/>',
+      gear: '<circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>'
+    };
+    function spec(svg, val) { return '<span class="flex items-center gap-1.5 text-slate-600"><svg class="h-4 w-4 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + svg + '</svg>' + val + '</span>'; }
+    function card(c) {
+      return '<article class="car group flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-150 hover:-translate-y-1 hover:shadow-lg" data-cat="' + c.cat + '">' +
+        '<div class="relative aspect-[16/10] overflow-hidden bg-slate-100">' +
+          '<img src="' + IMG + c.img + Q + '" alt="' + c.merk + ' ' + c.model + '" loading="lazy" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />' +
+          '<span class="absolute left-3 top-3 rounded-full bg-brand-orange px-3 py-1 text-xs font-semibold text-white shadow">' + c.badge + '</span>' +
+        '</div>' +
+        '<div class="flex flex-1 flex-col p-5">' +
+          '<h3 class="text-lg font-bold tracking-tight">' + c.merk + '</h3>' +
+          '<p class="text-sm text-slate-500">' + c.model + '</p>' +
+          '<div class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">' + spec(I.cal, c.jaar) + spec(I.road, c.km + ' km') + spec(I.fuel, c.brandstof) + spec(I.gear, c.transmissie) + '</div>' +
+          '<div class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">' +
+            '<span class="text-xl font-extrabold tightest text-ink-900">&euro; ' + c.prijs + '</span>' +
+            '<a href="contact.html" class="inline-flex items-center gap-1.5 rounded-md bg-ink-900 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-orange focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange">Bekijk auto <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>' +
+          '</div>' +
+        '</div>' +
+      '</article>';
+    }
+    document.getElementById('grid').innerHTML = cars.map(card).join('');
+    var count = document.getElementById('count');
+    document.querySelectorAll('.filter-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var f = btn.getAttribute('data-filter');
+        document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('bg-brand-orange','text-white','border-brand-orange'); b.classList.add('bg-white','text-slate-700','border-slate-300'); });
+        btn.classList.add('bg-brand-orange','text-white','border-brand-orange'); btn.classList.remove('bg-white','text-slate-700','border-slate-300');
+        var visible = 0;
+        document.querySelectorAll('.car').forEach(function (el) { var show = f === 'alle' || el.getAttribute('data-cat') === f; el.style.display = show ? '' : 'none'; if (show) visible++; });
+        count.textContent = '(' + visible + (visible === 1 ? ' auto)' : " auto's)");
+      });
+    });
+  </script>
+</body>
+</html>
