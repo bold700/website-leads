@@ -2,15 +2,19 @@
 
 Demo-websites voor Utrechtse bedrijven met een verouderde of ontbrekende site. Per lead bouwen we een moderne, responsive demo om aan de prospect te tonen.
 
-**Overzicht (live):** https://bold700.github.io/website-leads/
+**Publieke root (promo BOLD700):** https://bold700.github.io/website-leads/
+**Intern overzicht (niet publiek gelinkt):** https://bold700.github.io/website-leads/leads.html
+
+> De root is bewust een promotiepagina voor de studio, zodat een prospect die de lead-naam uit de URL haalt geen funnel of andere bedrijven ziet, maar een uitnodiging om contact op te nemen. Het lead-overzicht staat op `leads.html` en wordt nergens publiek gelinkt.
 
 ## Structuur
 ```
 website-leads/
-├─ index.html          # overzichtspagina met links naar alle demo's
+├─ index.html          # PUBLIEKE promotiepagina (BOLD700 studio)
+├─ leads.html          # INTERN overzicht met links naar alle demo's
 ├─ _template/          # starter-kit: site.css, site.js + STARTER.md (kopieer per nieuwe lead)
 ├─ fix-it-all/         # lead 1 — autogarage
-└─ rij-youyou/         # lead 2 — rijschool (RESEARCH.md klaar, design volgt)
+└─ rij-youyou/         # lead 2 — rijschool
 ```
 Elke lead-map is self-contained: eigen pagina's, eigen `site.css`/`site.js`, en een `RESEARCH.md` met de gescrapete brongegevens.
 

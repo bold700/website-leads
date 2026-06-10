@@ -3,53 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Website-leads — overzicht</title>
-  <meta name="description" content="Overzicht van demo-websites voor Utrechtse bedrijven." />
+  <title>BOLD700 — Creatieve studio &amp; websitebouwer</title>
+  <meta name="description" content="BOLD700 ontwerpt en bouwt moderne, razendsnelle websites voor lokale ondernemers. Mooi, mobiel-first en gemaakt om klanten op te leveren. Neem contact op." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BOLD700 — Creatieve studio & websitebouwer" />
+  <meta property="og:description" content="Moderne, snelle websites voor lokale ondernemers. Mooi, mobiel-first en gemaakt om klanten op te leveren." />
+  <meta property="og:url" content="https://bold700.github.io/website-leads/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <style>body{font-family:'Inter',system-ui,sans-serif}.tightest{letter-spacing:-0.03em}</style>
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { ink: { 950: '#08080D', 900: '#0B0B12', 800: '#12121C', card: '#14141F', border: '#26263A' }, accent: { DEFAULT: '#7C6CF6', soft: '#A99BFF' } },
+      fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+    } } };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .tightest { letter-spacing: -0.035em; }
+    .eyebrow { letter-spacing: 0.16em; }
+    .grad { background: linear-gradient(100deg, #A99BFF 0%, #7C6CF6 40%, #22D3EE 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .glow { background: radial-gradient(60% 60% at 70% 10%, rgba(124,108,246,0.28), transparent 70%), radial-gradient(50% 50% at 10% 30%, rgba(34,211,238,0.16), transparent 70%); }
+    @media (prefers-reduced-motion: no-preference) {
+      [data-rise] { opacity: 0; transform: translateY(16px); animation: rise 0.7s cubic-bezier(.22,.61,.36,1) forwards; }
+      @keyframes rise { to { opacity: 1; transform: none; } }
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-slate-950 text-white antialiased">
-  <div class="mx-auto max-w-5xl px-5 py-16 lg:py-24">
-    <header class="flex items-center justify-between">
-      <div class="text-xl font-extrabold tightest">Website<span class="text-orange-500">-leads</span></div>
-      <span class="text-sm text-white/40">Utrecht</span>
-    </header>
 
-    <div class="mt-12 max-w-2xl">
-      <h1 class="text-3xl font-extrabold tightest sm:text-4xl">Demo-websites voor lokale bedrijven</h1>
-      <p class="mt-3 text-white/60">Per lead een moderne, responsive demo om aan de prospect te laten zien wat er mogelijk is. Klik op een kaart om de demo te openen.</p>
-    </div>
+<body class="bg-ink-900 text-white antialiased selection:bg-accent/30">
+  <a href="#contact" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-3 focus:left-3 focus:rounded-md focus:bg-accent focus:px-4 focus:py-2 focus:font-semibold">Direct naar contact</a>
 
-    <section class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
-      <!-- Fix-It All -->
-      <a href="fix-it-all/" class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-150 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06] focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500">
-        <div class="flex items-center justify-between">
-          <span class="inline-flex items-center gap-2 rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-semibold text-emerald-400"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Live demo</span>
-          <svg class="h-5 w-5 text-white/30 transition-colors group-hover:text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 border-b border-white/5 bg-ink-900/80 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Hoofdnavigatie">
+      <a href="#top" class="text-xl font-extrabold tightest">BOLD<span class="grad">700</span></a>
+      <div class="flex items-center gap-5">
+        <a href="#diensten" class="hidden text-sm font-medium text-white/70 transition-colors hover:text-white sm:inline">Wat we doen</a>
+        <a href="#werkwijze" class="hidden text-sm font-medium text-white/70 transition-colors hover:text-white sm:inline">Werkwijze</a>
+        <a href="mailto:support@bold700.com" class="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-accent/25 transition-all duration-150 hover:bg-accent/90 active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900">Neem contact op</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="glow relative overflow-hidden">
+      <div class="mx-auto max-w-6xl px-5 pt-20 pb-20 text-center lg:px-8 lg:pt-28 lg:pb-28">
+        <p data-rise class="eyebrow text-xs font-bold uppercase text-accent-soft">Creatieve studio · websites die werken</p>
+        <h1 data-rise style="animation-delay:.06s" class="mx-auto mt-5 max-w-3xl text-4xl font-extrabold leading-[1.05] tightest sm:text-5xl lg:text-6xl">Zoek je een creatieve partner of een <span class="grad">websitebouwer</span>?</h1>
+        <p data-rise style="animation-delay:.12s" class="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/65 sm:text-lg">Wij ontwerpen en bouwen moderne, razendsnelle websites voor lokale ondernemers. Mooi, mobiel-first en gemaakt om bezoekers om te zetten in klanten.</p>
+        <div data-rise style="animation-delay:.18s" class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <a href="mailto:support@bold700.com?subject=Nieuwe%20website" class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-accent/25 transition-all duration-150 hover:bg-accent/90 active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900 sm:w-auto">Neem contact op <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          <a href="#diensten" class="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-white/15 px-7 py-4 text-sm font-semibold text-white transition-all duration-150 hover:bg-white/5 active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent sm:w-auto">Bekijk wat we doen</a>
         </div>
-        <h2 class="mt-5 text-xl font-bold tracking-tight">Fix-It All</h2>
-        <p class="mt-1 text-sm text-white/50">Autogarage · Utrecht</p>
-        <p class="mt-4 text-sm leading-relaxed text-white/60">Volledige site: diensten, occasions, reviews, vacature en contact. Donker premium thema met rood accent.</p>
-      </a>
-
-      <!-- Rijschool YouYou -->
-      <a href="rij-youyou/" class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-150 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06] focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500">
-        <div class="flex items-center justify-between">
-          <span class="inline-flex items-center gap-2 rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-semibold text-emerald-400"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Live demo</span>
-          <svg class="h-5 w-5 text-white/30 transition-colors group-hover:text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
-        </div>
-        <h2 class="mt-5 text-xl font-bold tracking-tight">Rijschool YOU YOU</h2>
-        <p class="mt-1 text-sm text-white/50">Rijschool · Utrecht</p>
-        <p class="mt-4 text-sm leading-relaxed text-white/60">Frisse, lichte one-pager met groene branding: opleidingen, tarieven, reviews en proefles-CTA. Mobile-first.</p>
-      </a>
+        <p data-rise style="animation-delay:.24s" class="mt-8 text-xs text-white/40">Mobiel-first · Razendsnel · Eerlijke prijs · Lokaal &amp; betrokken</p>
+      </div>
     </section>
 
-    <footer class="mt-16 border-t border-white/10 pt-6 text-xs text-white/40">
-      Interne overzichtspagina · demo's met placeholder-foto's en voorbeeldgegevens.
-    </footer>
-  </div>
+    <!-- DIENSTEN -->
+    <section id="diensten" class="border-t border-white/5 scroll-mt-16">
+      <div class="mx-auto max-w-6xl px-5 py-20 lg:px-8">
+        <div class="max-w-2xl">
+          <p class="eyebrow text-xs font-bold uppercase text-accent-soft">Wat we doen</p>
+          <h2 class="mt-3 text-3xl font-extrabold tightest sm:text-4xl">Een website die je bedrijf serieus neemt</h2>
+          <p class="mt-4 text-white/60">Geen sjabloon van de plank. Elk ontwerp is op maat, afgestemd op jouw bedrijf en je klanten.</p>
+        </div>
+        <div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="rounded-2xl border border-white/10 bg-ink-card p-6 transition-all duration-150 hover:-translate-y-1 hover:border-accent/40">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent-soft"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8M12 17v4"/></svg></span>
+            <h3 class="mt-4 text-base font-bold tracking-tight">Webdesign &amp; bouw</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/55">Modern, responsive en pixel-perfect. Van eerste schets tot live site.</p>
+          </article>
+          <article class="rounded-2xl border border-white/10 bg-ink-card p-6 transition-all duration-150 hover:-translate-y-1 hover:border-accent/40">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent-soft"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-6"/></svg></span>
+            <h3 class="mt-4 text-base font-bold tracking-tight">Conversiegericht</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/55">Heldere opzet die bezoekers omzet in afspraken, offertes en klanten.</p>
+          </article>
+          <article class="rounded-2xl border border-white/10 bg-ink-card p-6 transition-all duration-150 hover:-translate-y-1 hover:border-accent/40">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent-soft"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></span>
+            <h3 class="mt-4 text-base font-bold tracking-tight">Razendsnel &amp; vindbaar</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/55">Snelle laadtijd, nette SEO-basis en mooie previews op WhatsApp en social.</p>
+          </article>
+          <article class="rounded-2xl border border-white/10 bg-ink-card p-6 transition-all duration-150 hover:-translate-y-1 hover:border-accent/40">
+            <span class="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-accent/15 text-accent-soft"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21 8 14 2 9.4h7.6z"/></svg></span>
+            <h3 class="mt-4 text-base font-bold tracking-tight">Creatieve partner</h3>
+            <p class="mt-2 text-sm leading-relaxed text-white/55">We denken mee over merk, content en beeld. Niet alleen bouwen, maar verbeteren.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WERKWIJZE -->
+    <section id="werkwijze" class="border-t border-white/5 bg-ink-950 scroll-mt-16">
+      <div class="mx-auto max-w-6xl px-5 py-20 lg:px-8">
+        <div class="max-w-2xl"><p class="eyebrow text-xs font-bold uppercase text-accent-soft">Werkwijze</p><h2 class="mt-3 text-3xl font-extrabold tightest sm:text-4xl">Van idee naar live in drie stappen</h2></div>
+        <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
+          <div><div class="flex h-11 w-11 items-center justify-center rounded-full border border-accent/40 text-sm font-bold text-accent-soft">01</div><h3 class="mt-4 text-lg font-bold tracking-tight">Kennismaken</h3><p class="mt-2 text-sm leading-relaxed text-white/55">We bespreken je bedrijf, je doelen en wat je klanten nodig hebben. Je krijgt meteen een eerlijk advies.</p></div>
+          <div><div class="flex h-11 w-11 items-center justify-center rounded-full border border-accent/40 text-sm font-bold text-accent-soft">02</div><h3 class="mt-4 text-lg font-bold tracking-tight">Ontwerp &amp; bouw</h3><p class="mt-2 text-sm leading-relaxed text-white/55">We maken een ontwerp op maat en bouwen een snelle, mobiel-first site. Jij denkt mee onderweg.</p></div>
+          <div><div class="flex h-11 w-11 items-center justify-center rounded-full border border-accent/40 text-sm font-bold text-accent-soft">03</div><h3 class="mt-4 text-lg font-bold tracking-tight">Live &amp; doorgroeien</h3><p class="mt-2 text-sm leading-relaxed text-white/55">We zetten de site live en blijven beschikbaar voor updates en verbeteringen.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section id="contact" class="border-t border-white/5 scroll-mt-16">
+      <div class="mx-auto max-w-6xl px-5 py-20 lg:px-8">
+        <div class="glow overflow-hidden rounded-3xl border border-white/10 bg-ink-card p-10 text-center sm:p-14">
+          <h2 class="mx-auto max-w-2xl text-3xl font-extrabold tightest sm:text-4xl">Klaar voor een website die <span class="grad">wél werkt</span>?</h2>
+          <p class="mx-auto mt-4 max-w-lg text-white/65">Vertel ons kort over je bedrijf, dan laten we zien wat er mogelijk is. Vrijblijvend en zonder verkooppraat.</p>
+          <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a href="mailto:support@bold700.com?subject=Nieuwe%20website" class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-7 py-4 text-sm font-semibold text-white shadow-lg shadow-accent/25 transition-all duration-150 hover:bg-accent/90 active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink-card sm:w-auto">Mail ons direct</a>
+            <a href="mailto:support@bold700.com" class="text-sm font-semibold text-accent-soft hover:text-white transition-colors">support@bold700.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/5">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-5 py-8 text-sm text-white/45 sm:flex-row lg:px-8">
+      <div class="text-base font-extrabold tightest text-white">BOLD<span class="grad">700</span></div>
+      <p>Creatieve studio &amp; websitebouwer · <a href="mailto:support@bold700.com" class="hover:text-white transition-colors">support@bold700.com</a></p>
+      <p>&copy; <span id="year">2026</span> BOLD700</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
