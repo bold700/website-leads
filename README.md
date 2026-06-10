@@ -24,7 +24,7 @@ Elke lead-map is self-contained: eigen pagina's, eigen `site.css`/`site.js`, en 
 |---|---|---|---|
 | Fix-It All | Autogarage Utrecht | ✅ Live demo | [openen](https://bold700.github.io/website-leads/fix-it-all/) |
 | Rijschool YOU YOU | Rijschool Utrecht | ✅ Live demo | [openen](https://bold700.github.io/website-leads/rij-youyou/) |
-| Jaarrond Tuinen | Hovenier Zeist/Utrecht | 🔎 Research klaar, design volgt | — |
+| Jaarrond Tuinen | Hovenier Zeist/Utrecht | ✅ Live demo | [openen](https://bold700.github.io/website-leads/jaarrondtuinen/) |
 
 ## Nieuwe lead toevoegen
 Zie [`_template/STARTER.md`](_template/STARTER.md).

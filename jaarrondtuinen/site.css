@@ -1,0 +1,27 @@
+/* ===== Brand kleur op één plek (diep groen) ===== */
+:root {
+  --brand-green: 66 86 44;        /* #42562C */
+  --brand-green-dark: 51 68 31;   /* #33441F */
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Geist', system-ui, sans-serif; }
+.display { font-family: 'Fraunces', Georgia, serif; }
+.tightest { letter-spacing: -0.02em; }
+.eyebrow { letter-spacing: 0.18em; }
+
+/* Outlined floating label voor formulieren */
+.field { position: relative; }
+.field > label { position: absolute; top: -0.55rem; left: 0.7rem; padding: 0 0.35rem; background: #FCFBF7; font-size: 0.72rem; font-weight: 600; color: #6E7264; }
+
+@media (prefers-reduced-motion: no-preference) {
+  body { animation: pageFade 0.45s ease both; }
+  @keyframes pageFade { from { opacity: 0; } to { opacity: 1; } }
+  body.is-leaving { opacity: 0; transition: opacity 0.22s ease; }
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s cubic-bezier(.16,1,.3,1), transform 0.7s cubic-bezier(.16,1,.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

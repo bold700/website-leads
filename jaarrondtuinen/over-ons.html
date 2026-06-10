@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Over ons | Jaarrond Tuinen, hovenier uit Zeist</title>
+  <meta name="description" content="Jaarrond Tuinen is een hovenier uit Zeist met 15+ jaar ervaring, een vast team en erkend leerbedrijf. Tuinen netjes, mooi en zonder verrassingen." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="site.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Geist:wght@300..600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { brand: { green: 'rgb(var(--brand-green) / <alpha-value>)', greenDark: 'rgb(var(--brand-green-dark) / <alpha-value>)' }, cream: '#F1EFE7', card: '#FCFBF7', ink: '#1F271C', muted: '#6E7264' },
+      fontFamily: { display: ['Fraunces', 'Georgia', 'serif'], sans: ['Geist', 'system-ui', 'sans-serif'] },
+    } } };
+  </script>
+</head>
+
+<body class="bg-cream text-ink antialiased selection:bg-brand-green/20" data-page="over-ons">
+  <a href="#inhoud" class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-3 focus:left-3 focus:rounded-md focus:bg-brand-green focus:px-4 focus:py-2 focus:font-semibold focus:text-cream">Direct naar inhoud</a>
+  <div id="site-header"></div>
+
+  <main id="inhoud">
+    <section class="mx-auto max-w-7xl px-5 pt-10 pb-12 lg:px-8 lg:pt-14 lg:pb-16">
+      <div class="grid items-center gap-10 lg:grid-cols-2">
+        <div>
+          <nav class="mb-4 text-xs text-muted" aria-label="Kruimelpad"><a href="index.html" class="hover:text-brand-green">Home</a> <span class="mx-1.5">/</span> <span class="text-ink">Over ons</span></nav>
+          <p class="eyebrow text-xs font-semibold uppercase text-brand-green">Over ons</p>
+          <h1 class="display mt-3 text-4xl font-normal leading-[1.06] tightest sm:text-5xl">Uw tuin, onze zorg</h1>
+          <p class="lead mt-5 max-w-md text-base leading-relaxed text-muted">We verzorgen tuinen zoals we dat zelf ook graag zouden zien: netjes, logisch en zonder verrassingen. Met persoonlijke aandacht en vakmanschap in elk detail.</p>
+          <div class="mt-7"><a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-md bg-brand-green px-6 py-3.5 text-sm font-semibold text-cream transition-all duration-150 hover:bg-brand-greenDark active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green">Maak kennis met ons</a></div>
+        </div>
+        <div class="reveal-img"><img src="https://images.unsplash.com/photo-1713383658268-6b9bd03beb19?auto=format&fit=crop&w=1200&q=78" alt="Verzorgde tuin met gazon, borders en bomen" loading="eager" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-xl shadow-black/10" /></div>
+      </div>
+    </section>
+
+    <!-- CIJFERS -->
+    <section class="bg-[#ECEAE1]">
+      <div class="mx-auto max-w-7xl px-5 py-14 lg:px-8 lg:py-16">
+        <div class="grid grid-cols-2 gap-8 text-center lg:grid-cols-4">
+          <div><p class="display text-4xl font-normal text-brand-green sm:text-5xl">15+</p><p class="mt-1 text-sm text-muted">jaar ervaring</p></div>
+          <div><p class="display text-4xl font-normal text-brand-green sm:text-5xl">4,8</p><p class="mt-1 text-sm text-muted">uit 42 Google reviews</p></div>
+          <div><p class="display text-4xl font-normal text-brand-green sm:text-5xl">17</p><p class="mt-1 text-sm text-muted">plaatsen werkgebied</p></div>
+          <div><p class="display text-4xl font-normal text-brand-green sm:text-5xl">9</p><p class="mt-1 text-sm text-muted">diensten, één team</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VERHAAL -->
+    <section class="mx-auto max-w-3xl px-5 py-16 lg:px-8 lg:py-20">
+      <div class="space-y-5 text-base leading-relaxed text-muted">
+        <p>Jaarrond Tuinen is een hoveniersbedrijf uit <strong class="text-ink">Zeist</strong>, actief in Utrecht en de hele regio. Wat begon met een passie voor buiten is uitgegroeid tot een vast team van vakbekwame hoveniers met meer dan 15 jaar ervaring.</p>
+        <p>We geloven in vakmanschap in elk detail, van het eerste ontwerp tot de laatste plant. Heldere afspraken, eerlijke communicatie en een tuin die het hele jaar mooi blijft, dat is waar we voor staan.</p>
+        <p>Als <strong class="text-ink">erkend leerbedrijf</strong> werken we samen met Yuverta en Aeres en leiden we de volgende generatie hoveniers op. En we werken graag met goede, lokale leveranciers voor materialen die lang meegaan.</p>
+      </div>
+    </section>
+
+    <!-- WAARDEN -->
+    <section class="mx-auto max-w-7xl px-5 pb-16 lg:px-8 lg:pb-20">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div><svg class="h-8 w-8 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><h3 class="display mt-3 text-lg font-medium">Persoonlijke aandacht</h3><p class="mt-2 text-sm leading-relaxed text-muted">We luisteren echt naar je wensen en denken mee over wat past.</p></div>
+        <div><svg class="h-8 w-8 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><h3 class="display mt-3 text-lg font-medium">Vakmanschap</h3><p class="mt-2 text-sm leading-relaxed text-muted">Een ervaren vast team dat met oog voor detail werkt.</p></div>
+        <div><svg class="h-8 w-8 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13"/></svg><h3 class="display mt-3 text-lg font-medium">Heldere afspraken</h3><p class="mt-2 text-sm leading-relaxed text-muted">Transparante offertes en afspraken die we nakomen.</p></div>
+        <div><svg class="h-8 w-8 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-5-7-13-7-13S5 10 5 15a7 7 0 0 0 7 7z"/></svg><h3 class="display mt-3 text-lg font-medium">Oog voor groen</h3><p class="mt-2 text-sm leading-relaxed text-muted">Duurzame, onderhoudsarme tuinen die mooi blijven.</p></div>
+      </div>
+    </section>
+
+    <!-- WERKEN BIJ (groeisignaal) -->
+    <section class="mx-auto max-w-7xl px-5 pb-20 lg:px-8">
+      <div class="flex flex-col items-start justify-between gap-6 rounded-3xl border border-ink/8 bg-card p-8 shadow-sm sm:p-10 lg:flex-row lg:items-center">
+        <div>
+          <p class="eyebrow text-xs font-semibold uppercase text-brand-green">Werken bij</p>
+          <h2 class="display mt-3 text-2xl font-normal tightest sm:text-3xl">We groeien, kom je ons team versterken?</h2>
+          <p class="mt-2 max-w-xl text-sm text-muted">We zoeken een allround hovenier die houdt van buiten werken, vakmanschap en mooie resultaten. Salaris conform cao, eigen werkbus en uitzicht op een vast contract.</p>
+        </div>
+        <a href="mailto:info@jaarrondtuinen.nl?subject=Sollicitatie%20allround%20hovenier" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-md bg-brand-green px-6 py-3.5 text-sm font-semibold text-cream transition-all duration-150 hover:bg-brand-greenDark active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green">Solliciteer of vraag info</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="site.js"></script>
+</body>
+</html>
