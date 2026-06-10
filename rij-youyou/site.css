@@ -1,0 +1,28 @@
+/* ===== Brand kleur op één plek (groen) ===== */
+:root {
+  --brand-green: 67 160 71;        /* #43A047 */
+  --brand-green-dark: 46 125 50;   /* #2E7D32 */
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, sans-serif; }
+.tightest { letter-spacing: -0.03em; }
+.eyebrow { letter-spacing: 0.14em; }
+
+/* Outlined floating label voor formulieren */
+.field { position: relative; }
+.field > label { position: absolute; top: -0.55rem; left: 0.7rem; padding: 0 0.35rem; background: #fff; font-size: 0.72rem; font-weight: 600; color: #475569; }
+
+/* ===== Micro-animaties + page transitions (alleen als beweging gewenst is) ===== */
+@media (prefers-reduced-motion: no-preference) {
+  body { animation: pageFade 0.45s ease both; }
+  @keyframes pageFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  body.is-leaving { animation: none; opacity: 0; transition: opacity 0.22s ease; }
+
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s cubic-bezier(.22,.61,.36,1), transform 0.6s cubic-bezier(.22,.61,.36,1); }
+  .reveal.in { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
