@@ -119,7 +119,7 @@ function handleContact(e) {
   var KEY = 'b7pop_fixall';
   var DEADLINE = new Date('2026-06-24T23:59:59');
   try { var prev = localStorage.getItem(KEY); if (prev && (Date.now() - (+prev)) < 12 * 3600 * 1000) return; } catch (e) {}
-  var days = Math.max(0, Math.ceil((DEADLINE - new Date()) / 86400000));
+  var days = Math.max(0, Math.floor((DEADLINE - new Date()) / 86400000));
   var datum = DEADLINE.toLocaleDateString('nl-NL', { day: 'numeric', month: 'long' });
   var mail = 'mailto:support@bold700.com?subject=' + encodeURIComponent('Samenwerken: ' + SITE);
   var bel = 'mailto:support@bold700.com?subject=' + encodeURIComponent('Graag een belafspraak: ' + SITE);
