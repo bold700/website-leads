@@ -14,8 +14,8 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1622708414199-3ad073bdcec1?auto=format&fit=crop&w=1200&q=70" />
 
-  <link rel="stylesheet" href="tailwind.css?v=2" />
-  <link rel="stylesheet" href="site.css?v=2" />
+  <link rel="stylesheet" href="tailwind.css?v=3" />
+  <link rel="stylesheet" href="site.css?v=3" />
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="preconnect" href="https://images.unsplash.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Geist:wght@300..600&display=swap" rel="stylesheet" />
 </head>
@@ -25,31 +25,37 @@
   <div id="site-header"></div>
 
   <main>
-    <!-- HERO -->
-    <section class="banner flex min-h-[calc(100svh_-_4.75rem)] items-center text-white" style="background-image:url('https://images.unsplash.com/photo-1622708414199-3ad073bdcec1?auto=format&fit=crop&w=2000&q=72')">
-      <div class="mx-auto w-full max-w-7xl px-5 py-20 lg:px-8 lg:py-24">
-        <div class="max-w-2xl">
-          <p class="eyebrow text-xs font-semibold uppercase text-gold">Sinds 1850</p>
-          <h1 class="display mt-5 text-5xl font-semibold leading-[1.02] tightest sm:text-6xl lg:text-7xl">Al generaties thuis in de Utrechtse woningmarkt.</h1>
-          <p class="mt-6 max-w-lg text-base leading-relaxed text-white/80 sm:text-lg">Verkoop, aankoop, taxatie, verhuur, nieuwbouw en bedrijfsonroerend goed. Met lokale kennis, persoonlijke begeleiding en advies dat past bij jouw situatie.</p>
-          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-md bg-gold px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:scale-[1.02] active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy">Plan een verkoopadvies <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-            <a href="aanbod.html" class="inline-flex items-center justify-center gap-2 rounded-md border border-white/40 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">Bekijk ons aanbod</a>
-            <a href="diensten.html#taxaties" class="inline-flex items-center justify-center gap-2 rounded-md border border-white/40 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">Taxatie aanvragen</a>
+    <!-- HERO (full-height: kop + 2 CTA + USP-balk + scroll-cue) -->
+    <section class="banner flex min-h-[calc(100svh_-_4.75rem)] flex-col text-white" style="background-image:url('https://images.unsplash.com/photo-1622708414199-3ad073bdcec1?auto=format&fit=crop&w=2000&q=72')">
+      <div class="flex flex-1 items-center">
+        <div class="mx-auto w-full max-w-7xl px-5 pt-12 pb-8 lg:px-8">
+          <div class="max-w-2xl">
+            <p class="eyebrow text-xs font-semibold uppercase text-gold">Sinds 1850</p>
+            <h1 class="display mt-4 text-5xl font-semibold leading-[1.02] tightest sm:text-6xl lg:text-7xl">Al generaties thuis in de Utrechtse woningmarkt.</h1>
+            <p class="mt-5 max-w-lg text-base leading-relaxed text-white/80 sm:text-lg">Verkoop, aankoop, taxatie, verhuur, nieuwbouw en bedrijfsonroerend goed. Met lokale kennis, persoonlijke begeleiding en advies dat past bij jouw situatie.</p>
+            <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+              <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-md bg-gold px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:scale-[1.02] active:scale-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy">Plan een verkoopadvies <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+              <a href="aanbod.html" class="inline-flex items-center justify-center gap-2 rounded-md border border-white/40 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">Bekijk ons aanbod</a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- TRUSTBAR -->
-    <div class="bg-navy-deep text-white">
-      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 gap-y-6 px-5 py-7 lg:grid-cols-4 lg:divide-x lg:divide-white/10 lg:px-8">
-        <div class="flex items-start gap-3 lg:px-6 lg:first:pl-0"><svg class="mt-0.5 h-6 w-6 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5M9 11h.01M15 11h.01"/></svg><div><p class="text-sm font-semibold">Sinds 1850</p><p class="text-xs text-white/55">Al meer dan 170 jaar actief in Utrecht en omgeving</p></div></div>
-        <div class="flex items-start gap-3 lg:px-6"><svg class="mt-0.5 h-6 w-6 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><div><p class="text-sm font-semibold">NVM makelaars</p><p class="text-xs text-white/55">Ervaren makelaars en gediplomeerde taxateurs</p></div></div>
-        <div class="flex items-start gap-3 lg:px-6"><svg class="mt-0.5 h-6 w-6 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><p class="text-sm font-semibold">Utrecht en omgeving</p><p class="text-xs text-white/55">Diepgaande kennis van wijken en de lokale markt</p></div></div>
-        <div class="flex items-start gap-3 lg:px-6"><svg class="mt-0.5 h-6 w-6 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M3 10l9-7 9 7M5 21V10M19 21V10M9 21v-6h6v6"/></svg><div><p class="text-sm font-semibold">Wonen &amp; bedrijven</p><p class="text-xs text-white/55">Van wonen tot nieuwbouw en bedrijfsonroerend goed</p></div></div>
+      <!-- USP-balk binnen de hero -->
+      <div class="border-t border-white/15 bg-navy-deep/70 backdrop-blur-sm">
+        <div class="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 gap-y-5 px-5 py-6 lg:grid-cols-4 lg:divide-x lg:divide-white/10 lg:px-8">
+          <div class="flex items-start gap-3 lg:px-6 lg:first:pl-0"><svg class="mt-0.5 h-6 w-6 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-5h6v5M9 11h.01M15 11h.01"/></svg><div><p class="text-sm font-semibold">Sinds 1850</p><p class="text-xs text-white/60">Al meer dan 170 jaar actief in Utrecht en omgeving</p></div></div>
+          <div class="flex items-start gap-3 lg:px-6"><svg class="mt-0.5 h-6 w-6 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><div><p class="text-sm font-semibold">NVM makelaars</p><p class="text-xs text-white/60">Ervaren makelaars en gediplomeerde taxateurs</p></div></div>
+          <div class="flex items-start gap-3 lg:px-6"><svg class="mt-0.5 h-6 w-6 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><p class="text-sm font-semibold">Utrecht en omgeving</p><p class="text-xs text-white/60">Diepgaande kennis van wijken en de lokale markt</p></div></div>
+          <div class="flex items-start gap-3 lg:px-6"><svg class="mt-0.5 h-6 w-6 shrink-0 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M3 10l9-7 9 7M5 21V10M19 21V10M9 21v-6h6v6"/></svg><div><p class="text-sm font-semibold">Wonen &amp; bedrijven</p><p class="text-xs text-white/60">Van wonen tot nieuwbouw en bedrijfsonroerend goed</p></div></div>
+        </div>
+        <div class="flex justify-center pb-3">
+          <a href="#diensten" class="group inline-flex items-center justify-center rounded-full p-1 text-white/65 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep" aria-label="Scroll naar onze diensten">
+            <svg class="chev h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+        </div>
       </div>
-    </div>
+    </section>
 
     <!-- DIENSTEN -->
     <section id="diensten" class="scroll-mt-24">

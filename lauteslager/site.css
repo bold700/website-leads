@@ -28,7 +28,7 @@ body { font-family: 'Geist', system-ui, sans-serif; }
 .scroll-cue:focus-visible { outline: 2px solid rgb(var(--gold)); outline-offset: 5px; border-radius: 8px; }
 .scroll-cue .cue-label { font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .2em; }
 .scroll-cue .chev { width: 1.6rem; height: 1.6rem; }
-@media (prefers-reduced-motion: no-preference) { .scroll-cue .chev { animation: cueBounce 1.8s ease-in-out infinite; } }
+@media (prefers-reduced-motion: no-preference) { .chev { animation: cueBounce 1.8s ease-in-out infinite; } }
 @keyframes cueBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
 
 /* Diensten/aanbod dropdown (CSS) */
