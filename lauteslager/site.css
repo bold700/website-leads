@@ -1,0 +1,41 @@
+/* ===== Brand kleuren ===== */
+:root {
+  --navy: 22 41 74;       /* #16294A */
+  --navy-deep: 14 27 50;  /* #0E1B32 */
+  --gold: 191 152 78;     /* #BF984E */
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Geist', system-ui, sans-serif; }
+.display { font-family: 'Cormorant Garamond', Georgia, serif; }
+.tightest { letter-spacing: -0.01em; }
+.eyebrow { letter-spacing: 0.22em; }
+
+/* Header: wit, vast bij scrollen */
+#header { transition: box-shadow .3s ease, background-color .3s ease; }
+#header.hdr-solid { box-shadow: 0 8px 30px -18px rgba(14,27,50,.4); }
+
+/* Hero/banner met navy laag over beeld */
+.banner { position: relative; background-size: cover; background-position: center; }
+.banner::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgb(var(--navy-deep)) 0%, rgb(var(--navy-deep) / .82) 42%, rgb(var(--navy-deep) / .35) 100%); }
+.banner.banner-center::before { background: rgb(var(--navy-deep) / .62); }
+.banner > * { position: relative; z-index: 1; }
+
+/* Diensten/aanbod dropdown (CSS) */
+.has-menu > .submenu { opacity: 0; visibility: hidden; transform: translateY(6px); transition: all .18s ease; }
+.has-menu:hover > .submenu, .has-menu:focus-within > .submenu { opacity: 1; visibility: visible; transform: none; }
+
+/* Formulier floating label */
+.field { position: relative; }
+.field > label { position: absolute; top: -0.55rem; left: 0.7rem; padding: 0 0.35rem; background: #fff; font-size: 0.72rem; font-weight: 600; color: #6B7280; }
+
+@media (prefers-reduced-motion: no-preference) {
+  body { animation: pageFade .45s ease both; }
+  @keyframes pageFade { from { opacity: 0; } to { opacity: 1; } }
+  body.is-leaving { opacity: 0; transition: opacity .22s ease; }
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

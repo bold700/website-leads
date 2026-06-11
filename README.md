@@ -17,7 +17,7 @@ website-leads/
 ├─ rij-youyou/         # lead 2 — rijschool
 ├─ jaarrondtuinen/     # lead 3 — hovenier
 ├─ de-lachende-tuinman/ # lead — hovenier Maarssen (statische HTML)
-└─ lauteslager/        # lead 4 — makelaar (RESEARCH.md klaar, design volgt)
+└─ lauteslager/        # lead 4 — makelaar (live demo, navy/goud, sinds 1850)
 ```
 Elke lead-map is self-contained: eigen pagina's, eigen `site.css`/`site.js`, en een `RESEARCH.md` met de gescrapete brongegevens.
 
@@ -28,7 +28,7 @@ Elke lead-map is self-contained: eigen pagina's, eigen `site.css`/`site.js`, en 
 | Rijschool YOU YOU | Rijschool Utrecht | ✅ Live demo | [openen](https://bold700.github.io/website-leads/rij-youyou/) |
 | Jaarrond Tuinen | Hovenier Zeist/Utrecht | ✅ Live demo | [openen](https://bold700.github.io/website-leads/jaarrondtuinen/) |
 | De Lachende Tuinman | Hovenier Maarssen | ✅ Live demo | [openen](https://bold700.github.io/website-leads/de-lachende-tuinman/) |
-| Lauteslager Makelaars | Makelaar Utrecht | 🔎 Research klaar, design volgt | — |
+| Lauteslager Makelaars | Makelaar Utrecht | ✅ Live demo | [openen](https://bold700.github.io/website-leads/lauteslager/) |
 
 ## Nieuwe lead toevoegen
 Zie [`_template/STARTER.md`](_template/STARTER.md).
