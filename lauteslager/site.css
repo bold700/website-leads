@@ -21,6 +21,15 @@ body { font-family: 'Geist', system-ui, sans-serif; }
 .banner.banner-center::before { background: rgb(var(--navy-deep) / .62); }
 .banner > * { position: relative; z-index: 1; }
 
+/* Scroll-naar-volgende-sectie indicator (hero zonder CTA) */
+.scroll-cue { position: absolute; left: 50%; bottom: 1.6rem; transform: translateX(-50%); z-index: 2; display: inline-flex; flex-direction: column; align-items: center; gap: .35rem; color: rgb(255 255 255 / .72); transition: color .15s ease; }
+.scroll-cue:hover { color: #fff; }
+.scroll-cue:focus-visible { outline: 2px solid rgb(var(--gold)); outline-offset: 5px; border-radius: 8px; }
+.scroll-cue .cue-label { font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .2em; }
+.scroll-cue .chev { width: 1.6rem; height: 1.6rem; }
+@media (prefers-reduced-motion: no-preference) { .scroll-cue .chev { animation: cueBounce 1.8s ease-in-out infinite; } }
+@keyframes cueBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
+
 /* Diensten/aanbod dropdown (CSS) */
 .has-menu > .submenu { opacity: 0; visibility: hidden; transform: translateY(6px); transition: all .18s ease; }
 .has-menu:hover > .submenu, .has-menu:focus-within > .submenu { opacity: 1; visibility: visible; transform: none; }
