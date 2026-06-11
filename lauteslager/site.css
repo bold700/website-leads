@@ -22,7 +22,8 @@ body { font-family: 'Geist', system-ui, sans-serif; }
 .banner > * { position: relative; z-index: 1; }
 
 /* Scroll-naar-volgende-sectie indicator (hero zonder CTA) */
-.scroll-cue { position: absolute; left: 50%; bottom: 1.6rem; transform: translateX(-50%); z-index: 2; display: inline-flex; flex-direction: column; align-items: center; gap: .35rem; color: rgb(255 255 255 / .72); transition: color .15s ease; }
+.banner > .scroll-cue { position: absolute; left: 50%; bottom: 1.6rem; transform: translateX(-50%); z-index: 2; }
+.scroll-cue { display: inline-flex; flex-direction: column; align-items: center; gap: .35rem; color: rgb(255 255 255 / .72); transition: color .15s ease; }
 .scroll-cue:hover { color: #fff; }
 .scroll-cue:focus-visible { outline: 2px solid rgb(var(--gold)); outline-offset: 5px; border-radius: 8px; }
 .scroll-cue .cue-label { font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .2em; }
