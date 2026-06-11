@@ -15,7 +15,8 @@ website-leads/
 ├─ _template/          # starter-kit: site.css, site.js + STARTER.md (kopieer per nieuwe lead)
 ├─ fix-it-all/         # lead 1 — autogarage
 ├─ rij-youyou/         # lead 2 — rijschool
-└─ jaarrondtuinen/     # lead 3 — hovenier (RESEARCH.md klaar, design volgt)
+├─ jaarrondtuinen/     # lead 3 — hovenier
+└─ lauteslager/        # lead 4 — makelaar (RESEARCH.md klaar, design volgt)
 ```
 Elke lead-map is self-contained: eigen pagina's, eigen `site.css`/`site.js`, en een `RESEARCH.md` met de gescrapete brongegevens.
 
@@ -25,6 +26,7 @@ Elke lead-map is self-contained: eigen pagina's, eigen `site.css`/`site.js`, en 
 | Fix-It All | Autogarage Utrecht | ✅ Live demo | [openen](https://bold700.github.io/website-leads/fix-it-all/) |
 | Rijschool YOU YOU | Rijschool Utrecht | ✅ Live demo | [openen](https://bold700.github.io/website-leads/rij-youyou/) |
 | Jaarrond Tuinen | Hovenier Zeist/Utrecht | ✅ Live demo | [openen](https://bold700.github.io/website-leads/jaarrondtuinen/) |
+| Lauteslager Makelaars | Makelaar Utrecht | 🔎 Research klaar, design volgt | — |
 
 ## Nieuwe lead toevoegen
 Zie [`_template/STARTER.md`](_template/STARTER.md).
