@@ -11,9 +11,27 @@ body { font-family: 'Geist', system-ui, sans-serif; }
 .tightest { letter-spacing: -0.01em; }
 .eyebrow { letter-spacing: 0.22em; }
 
-/* Header: wit, vast bij scrollen */
-#header { transition: box-shadow .3s ease, background-color .3s ease; }
-#header.hdr-solid { box-shadow: 0 8px 30px -18px rgba(14,27,50,.4); }
+/* Header: transparant over de hero, wit zodra je scrollt (of mobiel menu open) */
+#header { transition: background-color .3s ease, box-shadow .3s ease, border-color .3s ease; border-bottom: 1px solid transparent; }
+#header:not(.hdr-solid):not(.hdr-open) { background-image: linear-gradient(to bottom, rgb(14 27 50 / .55), rgb(14 27 50 / 0)); }
+#header.hdr-solid, #header.hdr-open { background-color: rgb(255 255 255 / .95); backdrop-filter: saturate(1.4) blur(8px); border-bottom-color: #E7E4DC; box-shadow: 0 8px 30px -18px rgba(14,27,50,.4); }
+
+/* Logo wit op transparante header */
+.logo-img { transition: filter .3s ease; }
+#header:not(.hdr-solid):not(.hdr-open) .logo-img { filter: brightness(0) invert(1); }
+
+/* Navigatie-kleuren per staat */
+.nav-link { transition: color .15s ease; }
+#header.hdr-solid .nav-link, #header.hdr-open .nav-link { color: rgb(26 34 51 / .8); }
+#header.hdr-solid .nav-link:hover, #header.hdr-open .nav-link:hover { color: rgb(var(--navy)); }
+#header:not(.hdr-solid):not(.hdr-open) .nav-link { color: rgb(255 255 255 / .88); }
+#header:not(.hdr-solid):not(.hdr-open) .nav-link:hover { color: #fff; }
+.nav-link.is-active { color: rgb(var(--gold)) !important; }
+
+/* Mobiele menuknop per staat */
+.menu-btn { transition: color .15s ease, border-color .15s ease; }
+#header.hdr-solid .menu-btn, #header.hdr-open .menu-btn { color: rgb(var(--navy)); border-color: #E7E4DC; }
+#header:not(.hdr-solid):not(.hdr-open) .menu-btn { color: #fff; border-color: rgb(255 255 255 / .45); }
 
 /* Hero/banner met navy laag over beeld */
 .banner { position: relative; background-size: cover; background-position: center; }

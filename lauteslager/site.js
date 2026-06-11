@@ -37,29 +37,29 @@
   var arrow = '<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>';
 
   function logo(cls) {
-    return '<a href="index.html" class="flex items-center ' + (cls || '') + '" aria-label="Lauteslager Makelaars, naar home"><img src="assets/logo.png" alt="Lauteslager Makelaars" width="1024" height="316" class="h-11 w-auto" /></a>';
+    return '<a href="index.html" class="flex items-center ' + (cls || '') + '" aria-label="Lauteslager Makelaars, naar home"><img src="assets/logo.png" alt="Lauteslager Makelaars" width="1024" height="316" class="logo-img h-11 w-auto" /></a>';
   }
 
   function dropdown(key) {
     var m = MENUS[key];
     var on = active === key;
-    return '<li class="has-menu relative"><a href="' + m.href + '" class="inline-flex items-center gap-0.5 rounded px-2.5 py-2 text-sm font-medium ' + (on ? 'text-gold' : 'text-ink/80 hover:text-navy') + ' transition-colors">' + m.label + chevron + '</a>' +
+    return '<li class="has-menu relative"><a href="' + m.href + '" class="nav-link ' + (on ? 'is-active ' : '') + 'inline-flex items-center gap-0.5 rounded px-2.5 py-2 text-sm font-medium">' + m.label + chevron + '</a>' +
       '<div class="submenu absolute left-0 top-full z-10 pt-3"><ul class="min-w-[15rem] rounded-xl border border-line bg-white p-1.5 shadow-2xl">' +
       m.items.map(function (it) { return '<li><a class="block rounded-lg px-3 py-2.5 text-sm font-medium text-ink/80 hover:bg-paper hover:text-navy" href="' + it.href + '">' + it.label + '</a></li>'; }).join('') +
       '</ul></div></li>';
   }
 
   var header = '' +
-    '<header id="header" class="sticky top-0 z-50 border-b border-line bg-white/95 backdrop-blur">' +
+    '<header id="header" class="fixed inset-x-0 top-0 z-50">' +
       '<nav class="mx-auto flex h-[4.75rem] max-w-7xl items-center justify-between gap-4 px-5 lg:px-8" aria-label="Hoofdnavigatie">' +
         logo() +
         '<ul class="hidden items-center gap-1 xl:flex">' +
           dropdown('aanbod') + dropdown('diensten') + dropdown('wijken') + dropdown('over-ons') +
-          '<li><a href="contact.html" class="rounded px-2.5 py-2 text-sm font-medium ' + (active === 'contact' ? 'text-gold' : 'text-ink/80 hover:text-navy') + ' transition-colors">Contact</a></li>' +
+          '<li><a href="contact.html" class="nav-link ' + (active === 'contact' ? 'is-active ' : '') + 'rounded px-2.5 py-2 text-sm font-medium">Contact</a></li>' +
         '</ul>' +
         '<div class="flex items-center gap-2">' +
           '<a href="contact.html" class="hidden items-center gap-2 rounded-md bg-gold px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-gold/90 sm:inline-flex">Neem contact op ' + arrow + '</a>' +
-          '<button id="menuBtn" type="button" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu" class="inline-flex h-11 w-11 items-center justify-center rounded-md border border-line text-navy xl:hidden"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>' +
+          '<button id="menuBtn" type="button" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu" class="menu-btn inline-flex h-11 w-11 items-center justify-center rounded-md border xl:hidden"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>' +
         '</div>' +
       '</nav>' +
       '<div id="mobileMenu" class="hidden border-t border-line bg-white xl:hidden">' +
@@ -107,7 +107,7 @@
   var menu = document.getElementById('mobileMenu'), btn = document.getElementById('menuBtn');
   function onScroll() { headerEl.classList.toggle('hdr-solid', window.scrollY > 8); }
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
-  btn.addEventListener('click', function () { var open = menu.classList.toggle('hidden') === false; btn.setAttribute('aria-expanded', String(open)); });
+  btn.addEventListener('click', function () { var open = menu.classList.toggle('hidden') === false; btn.setAttribute('aria-expanded', String(open)); headerEl.classList.toggle('hdr-open', open); });
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
 
   var noPref = window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
