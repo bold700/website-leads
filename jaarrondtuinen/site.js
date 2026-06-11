@@ -18,8 +18,8 @@
   var phoneIcon = '<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
 
   function logo() {
-    return '<a href="index.html" class="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green rounded">' + leaf +
-      '<span class="leading-none"><span class="display block text-lg font-semibold tracking-[0.18em] text-ink">JAARROND</span><span class="block text-[10px] font-medium uppercase tracking-[0.34em] text-muted">Tuinen</span></span></a>';
+    return '<a href="index.html" class="inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-green rounded" aria-label="Jaarrond Tuinen, naar home">' +
+      '<img src="assets/logo.webp" alt="Jaarrond Tuinen" width="177" height="91" class="h-12 w-auto" /></a>';
   }
   function deskItem(it) {
     var cls = it.key === active ? 'text-brand-green' : 'text-ink/70 hover:text-brand-green transition-colors duration-150';
