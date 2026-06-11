@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projecten | De Lachende Tuinman</title>
+  <meta name="description" content="Een greep uit tuinen, terrassen en schuttingen die Chris realiseerde in Maarssen, Utrecht, Nieuwegein en omgeving." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="site.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Geist:wght@300..600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { brand: { green: 'rgb(var(--brand-green) / <alpha-value>)', greenDark: 'rgb(var(--brand-green-dark) / <alpha-value>)', accent: 'rgb(var(--brand-accent) / <alpha-value>)' }, cream: '#F4F1E9', card: '#FCFBF7', ink: '#1F271C', muted: '#6E7264', border: '#E4DFD2' },
+      fontFamily: { display: ['Fraunces', 'Georgia', 'serif'], sans: ['Geist', 'system-ui', 'sans-serif'] },
+    } } };
+  </script>
+</head>
+
+<body class="bg-cream text-ink antialiased selection:bg-brand-accent/30" data-page="projecten">
+  <a href="#projecten" class="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:left-4 focus:top-4 focus:rounded-md focus:bg-brand-green focus:px-4 focus:py-2 focus:font-semibold focus:text-white">Direct naar inhoud</a>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="banner flex min-h-[56svh] items-end text-white" style="background-image:url('https://images.unsplash.com/photo-1761637824276-a75efae3adcf?auto=format&fit=crop&w=2000&q=78')">
+      <div class="container mx-auto w-full max-w-6xl px-5 pb-14 pt-32 lg:px-8">
+        <p class="eyebrow text-xs font-semibold uppercase text-brand-accent">Projecten</p>
+        <h1 class="display mt-3 max-w-2xl text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl">Tuinen waar mensen blij van worden</h1>
+        <p class="mt-5 max-w-xl text-lg leading-relaxed text-white/85">Een greep uit het werk in de regio. Elke tuin begon bij het idee van de klant, en is netjes opgeleverd.</p>
+      </div>
+    </section>
+
+    <section id="projecten" class="scroll-mt-24">
+      <div class="container mx-auto max-w-6xl px-5 py-20 md:py-24 lg:px-8">
+        <div class="grid grid-cols-1 gap-7 sm:grid-cols-2">
+          <article class="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"><div class="aspect-[16/10] overflow-hidden bg-muted"><img src="https://images.unsplash.com/photo-1695616827909-6f147f22d40f?auto=format&fit=crop&w=900&q=78" alt="Onderhoudsvriendelijke tuin in Maarssen" loading="lazy" class="h-full w-full object-cover" /></div><div class="p-6"><p class="text-xs font-medium text-muted">Maarssen</p><h2 class="mt-1 display text-xl font-semibold">Onderhoudsvriendelijke tuin</h2><p class="mt-3 text-sm leading-relaxed text-muted">Een drukke familie wilde een tuin om van te genieten, niet om in te werken. Strak terras in gebakken klinkers, makkelijke beplanting en een groen hoekje voor de kinderen. Netjes opgeleverd.</p><div class="mt-4 flex flex-wrap gap-2 text-xs"><span class="rounded-full border border-border px-2.5 py-1 text-muted">Tuinaanleg</span><span class="rounded-full border border-border px-2.5 py-1 text-muted">Bestrating</span><span class="rounded-full border border-border px-2.5 py-1 text-muted">Beplanting</span></div></div></article>
+          <article class="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"><div class="aspect-[16/10] overflow-hidden bg-muted"><img src="https://images.unsplash.com/photo-1563714193017-5a5fb60bc02b?auto=format&fit=crop&w=900&q=78" alt="Nieuwe schutting en bestrating in Utrecht" loading="lazy" class="h-full w-full object-cover" /></div><div class="p-6"><p class="text-xs font-medium text-muted">Utrecht</p><h2 class="mt-1 display text-xl font-semibold">Nieuwe schutting en bestrating</h2><p class="mt-3 text-sm leading-relaxed text-muted">Meer privacy en een terras dat strak ligt. Een nieuwe, stevige schutting in duurzaam hout en de bestrating opnieuw gelegd op een goede ondergrond. Alles binnen de afspraak.</p><div class="mt-4 flex flex-wrap gap-2 text-xs"><span class="rounded-full border border-border px-2.5 py-1 text-muted">Schuttingen</span><span class="rounded-full border border-border px-2.5 py-1 text-muted">Bestrating</span><span class="rounded-full border border-border px-2.5 py-1 text-muted">Grondwerk</span></div></div></article>
+          <article class="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"><div class="aspect-[16/10] overflow-hidden bg-muted"><img src="https://images.unsplash.com/photo-1713383658268-6b9bd03beb19?auto=format&fit=crop&w=900&q=78" alt="Voortuin opgeknapt in Nieuwegein" loading="lazy" class="h-full w-full object-cover" /></div><div class="p-6"><p class="text-xs font-medium text-muted">Nieuwegein</p><h2 class="mt-1 display text-xl font-semibold">Voortuin opgeknapt</h2><p class="mt-3 text-sm leading-relaxed text-muted">Een verzorgde voortuin die meteen een fijne eerste indruk geeft. Nieuwe bestrating met een ruime parkeerplek en een pad naar de voordeur, met lage beplanting eromheen.</p><div class="mt-4 flex flex-wrap gap-2 text-xs"><span class="rounded-full border border-border px-2.5 py-1 text-muted">Bestrating</span><span class="rounded-full border border-border px-2.5 py-1 text-muted">Beplanting</span><span class="rounded-full border border-border px-2.5 py-1 text-muted">Grondwerk</span></div></div></article>
+          <article class="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"><div class="aspect-[16/10] overflow-hidden bg-muted"><img src="https://images.unsplash.com/photo-1623625434531-d130448273c1?auto=format&fit=crop&w=900&q=78" alt="Overkapping en groen in Vleuten" loading="lazy" class="h-full w-full object-cover" /></div><div class="p-6"><p class="text-xs font-medium text-muted">Vleuten</p><h2 class="mt-1 display text-xl font-semibold">Overkapping en groen</h2><p class="mt-3 text-sm leading-relaxed text-muted">Een plek om buiten te zitten, ook als het regent. Houten overkapping op maat met groen eromheen, zodat het echt onderdeel van de tuin werd. Stevig gebouwd en netjes afgewerkt.</p><div class="mt-4 flex flex-wrap gap-2 text-xs"><span class="rounded-full border border-border px-2.5 py-1 text-muted">Houtwerk</span><span class="rounded-full border border-border px-2.5 py-1 text-muted">Tuinaanleg</span><span class="rounded-full border border-border px-2.5 py-1 text-muted">Beplanting</span></div></div></article>
+        </div>
+        <p class="mt-10 text-center text-sm text-muted">Iets gezien dat lijkt op jouw tuinwens? <a href="contact.html" class="font-semibold text-brand-green hover:underline">Vraag vrijblijvend advies →</a></p>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="site.js"></script>
+</body>
+</html>
