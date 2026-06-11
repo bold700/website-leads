@@ -13,7 +13,8 @@ body { font-family: 'Geist', system-ui, sans-serif; }
 
 /* Header: transparant over de hero, wit zodra je scrollt (of mobiel menu open) */
 #header { transition: background-color .3s ease, box-shadow .3s ease, border-color .3s ease; border-bottom: 1px solid transparent; }
-#header:not(.hdr-solid):not(.hdr-open) { background-image: linear-gradient(to bottom, rgb(14 27 50 / .55), rgb(14 27 50 / 0)); }
+#header::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 150px; background: linear-gradient(to bottom, rgb(14 27 50 / .5), rgb(14 27 50 / 0)); pointer-events: none; z-index: -1; transition: opacity .3s ease; }
+#header.hdr-solid::before, #header.hdr-open::before { opacity: 0; }
 #header.hdr-solid, #header.hdr-open { background-color: rgb(255 255 255 / .95); backdrop-filter: saturate(1.4) blur(8px); border-bottom-color: #E7E4DC; box-shadow: 0 8px 30px -18px rgba(14,27,50,.4); }
 
 /* Logo wit op transparante header */
