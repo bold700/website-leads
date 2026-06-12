@@ -62,16 +62,6 @@
           '<button id="menuBtn" type="button" aria-label="Menu openen" aria-expanded="false" aria-controls="mobileMenu" class="menu-btn inline-flex h-11 w-11 items-center justify-center rounded-md border xl:hidden"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>' +
         '</div>' +
       '</nav>' +
-      '<div id="mobileMenu" class="hidden border-t border-line bg-white xl:hidden">' +
-        '<nav class="mx-auto flex max-w-7xl flex-col px-5 py-4" aria-label="Mobiele navigatie">' +
-          Object.keys(MENUS).map(function (k) {
-            var m = MENUS[k];
-            return '<a class="rounded-md px-2 py-3 text-base font-medium text-navy hover:bg-paper" href="' + m.href + '">' + m.label + '</a>';
-          }).join('') +
-          '<a class="rounded-md px-2 py-3 text-base font-medium text-navy hover:bg-paper" href="contact.html">Contact</a>' +
-          '<a href="contact.html" class="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-md bg-gold px-4 py-3 text-sm font-semibold text-white">Neem contact op</a>' +
-        '</nav>' +
-      '</div>' +
     '</header>';
 
   function fcol(title, items) {
@@ -99,15 +89,38 @@
 
   var toast = '<div id="toast" class="pointer-events-none fixed bottom-5 left-1/2 z-[60] hidden -translate-x-1/2"><div class="pointer-events-auto flex items-center gap-3 rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink shadow-2xl"><svg class="h-6 w-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg><div><p class="font-semibold">Bedankt! Je aanvraag is verzonden.</p><p class="text-muted">We nemen snel contact met je op.</p></div></div></div>';
 
+  var mobileMenu = '' +
+    '<div id="mobileMenu" class="fixed inset-0 z-[60] hidden flex flex-col overflow-y-auto bg-navy text-white xl:hidden">' +
+      '<div class="flex h-[4.75rem] shrink-0 items-center justify-between px-5">' +
+        '<img src="assets/logo.png" alt="Lauteslager Makelaars" class="h-10 w-auto" style="filter:brightness(0) invert(1)" />' +
+        '<button id="menuClose" type="button" aria-label="Menu sluiten" class="inline-flex h-11 w-11 items-center justify-center rounded-md border border-white/25 bg-white/10 text-white transition-colors hover:bg-white/20"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>' +
+      '</div>' +
+      '<nav class="flex flex-1 flex-col justify-center px-6 py-4" aria-label="Mobiele navigatie">' +
+        Object.keys(MENUS).map(function (k) { var m = MENUS[k]; var on = active === k; return '<a class="display border-b border-white/10 py-4 text-3xl font-medium transition-colors ' + (on ? 'text-gold' : 'text-white hover:text-gold') + '" href="' + m.href + '">' + m.label + '</a>'; }).join('') +
+        '<a class="display border-b border-white/10 py-4 text-3xl font-medium transition-colors ' + (active === 'contact' ? 'text-gold' : 'text-white hover:text-gold') + '" href="contact.html">Contact</a>' +
+      '</nav>' +
+      '<div class="shrink-0 px-6 pb-8 pt-2">' +
+        '<a href="contact.html" class="flex w-full items-center justify-center gap-2 rounded-md bg-gold px-6 py-4 text-base font-semibold text-white">Neem contact op ' + arrow + '</a>' +
+        '<a href="' + TEL_HREF + '" class="mt-4 flex items-center justify-center gap-2 text-sm text-white/70 transition-colors hover:text-white"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>' + TEL_DISPLAY + '</a>' +
+      '</div>' +
+    '</div>';
+
   var h = document.getElementById('site-header'); if (h) h.outerHTML = header;
   var f = document.getElementById('site-footer'); if (f) f.outerHTML = footer;
   document.body.insertAdjacentHTML('beforeend', toast);
+  document.body.insertAdjacentHTML('beforeend', mobileMenu);
 
   var headerEl = document.getElementById('header');
   var menu = document.getElementById('mobileMenu'), btn = document.getElementById('menuBtn');
+  var menuClose = document.getElementById('menuClose');
   function onScroll() { headerEl.classList.toggle('hdr-solid', window.scrollY > 8); }
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
-  btn.addEventListener('click', function () { var open = menu.classList.toggle('hidden') === false; btn.setAttribute('aria-expanded', String(open)); headerEl.classList.toggle('hdr-open', open); });
+  function openMenu() { menu.classList.remove('hidden'); requestAnimationFrame(function () { menu.classList.add('mm-in'); }); btn.setAttribute('aria-expanded', 'true'); document.documentElement.style.overflow = 'hidden'; }
+  function closeMenu() { menu.classList.remove('mm-in'); btn.setAttribute('aria-expanded', 'false'); document.documentElement.style.overflow = ''; setTimeout(function () { menu.classList.add('hidden'); }, 250); }
+  btn.addEventListener('click', openMenu);
+  if (menuClose) menuClose.addEventListener('click', closeMenu);
+  menu.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('a')) closeMenu(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.classList.contains('hidden')) closeMenu(); });
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
 
   var noPref = window.matchMedia('(prefers-reduced-motion: no-preference)').matches;

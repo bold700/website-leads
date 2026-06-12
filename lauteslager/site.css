@@ -34,6 +34,10 @@ body { font-family: 'Geist', system-ui, sans-serif; }
 #header.hdr-solid .menu-btn, #header.hdr-open .menu-btn { color: rgb(var(--navy)); border-color: #E7E4DC; }
 #header:not(.hdr-solid):not(.hdr-open) .menu-btn { color: #fff; border-color: rgb(255 255 255 / .45); }
 
+/* Full-screen mobiel menu */
+#mobileMenu { opacity: 0; transition: opacity .25s ease; }
+#mobileMenu.mm-in { opacity: 1; }
+
 /* Hero/banner met navy laag over beeld */
 .banner { position: relative; background-size: cover; background-position: center; }
 .banner::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgb(var(--navy-deep)) 0%, rgb(var(--navy-deep) / .82) 42%, rgb(var(--navy-deep) / .35) 100%); }
